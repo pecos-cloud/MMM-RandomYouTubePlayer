@@ -30,18 +30,19 @@ Module.register("MMM-RandomYouTubePlayer", {
         // playlist ID is found in the URL on YouTube:
         // https://www.youtube.com/playlist?list=PLl_KM23gznEAZW-INW8ty4QNaHH8JCnNW
         // whereas "PLl_KM23gznEAZW-INW8ty4QNaHH8JCnNW" is the 'list' you need to replace below
-        list: "PLl_KM23gznEAZW-INW8ty4QNaHH8JCnNW",
+        playlistId: "PLl_KM23gznEAZW-INW8ty4QNaHH8JCnNW",
         height: "394", // specified in pixels (px)
         width: "700", // specified in pixels (px)
         showinfo: false,
         rel: false,
         fs: true,
         modestbranding: true,
-		autoplay: true,
+	autoplay: true,
         enablejsapi: true,
         controls: true,
         cc_load_policy: true,
-		loop: false
+	loop: false,
+	volume: 100
     },
 		
     /* other congiurable options
@@ -77,7 +78,7 @@ Module.register("MMM-RandomYouTubePlayer", {
                     width: self.config.width,
                     playerVars: {
                         listType: "playlist",
-                        list: self.config.list,
+                        list: self.config.playlistId,
                         showinfo: self.config.showinfo,
                         autoplay: self.config.autoplay,
                         enablejsapi: self.config.enablejsapi,
@@ -116,5 +117,6 @@ Module.register("MMM-RandomYouTubePlayer", {
         var index = Math.floor(Math.random() * arrayLength);
         event.target.setShuffle(true);
         event.target.playVideoAt(index);
+	event.target.setVolume(self.config.volume);
     }
 });
