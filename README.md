@@ -23,7 +23,7 @@ modules: [
 ## Install...
 ```
 cd ~/MagicMirror/modules
-git clone https://github.com/justjim1220/MMM-RandomYouTubePlayer.git
+git clone https://github.com/pecos-cloud/MMM-RandomYouTubePlayer.git
 ```
 
 ## Optional parameters: (defaults for the player as is. change per your needs...)
@@ -57,7 +57,7 @@ The following properties CAN be configured:
 | Option                | Description
 | -----------------     | ---------------------------------------------------------------------
 | autoplay: true        | Autoplays video when it loaded <br> **true OR false**
-| volume: 75%:          | Sets the volume at a certain level when starting <br> **1 to 100 %**
+| volume: 75          | Sets the volume at a certain level when starting <br> **1 to 100**
 | color: "red"          | Player's video progress bar - color can only be "red" or "white <br> **red or white**
 | controls: true        | Show youtube video controls bar <br> **true OR false**
 | enablejsapi: true     | Enables the player to be controlled via IFrame API calls. <br> **true OR false**
